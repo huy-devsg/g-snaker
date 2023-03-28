@@ -86,10 +86,10 @@ $_SESSION['total_price'] = number_format($total_price, 2);
                                     <div class="product_image-bg_left">
                                         <img src="' . $image . '" >
                                     </div>
-                                    <div class="product_item-name_left">'.$shoe['name'].'</div>
-                                    <div class="product_item-description_left">' . $shoe['description'] . '</div>
+                                    <div class="product_item-name_left">'.$name.'</div>
+                                    <div class="product_item-description_left">' . $description . '</div>
                                     <div class="product_add_item">
-                                    <div class="product_item-price_left">$ ' . $shoe['price']. '</div>';
+                                    <div class="product_item-price_left">$ ' . $price. '</div>';
                                     if ($added) {
                                         echo '<div class="product_add_button_added"><img src="app/assets/check.png" width="70%"></div>';
                                     } else {
