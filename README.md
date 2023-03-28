@@ -1,64 +1,42 @@
-# G-Sneaker
+Shoe Shopping Web App
+This is a PHP-based web application for an online shoe store, with shopping cart functionality.
 
-This is the instruction for web developer intern assignment at [Golden Owl](https://goldenowl.asia). You will build a simple shopping cart.
+Getting started
+Before using this application, ensure that PHP and a web server (e.g. Apache) are installed on your computer.
 
-![Screenshot](./screenshots/screenshot.jpg)
+Clone the repository to your local machine:
+bash
+Copy code
+git clone https://github.com/huy-devsg/g-snaker.git
+Navigate to the g-snaker directory:
+bash
+Copy code
+cd g-snaker
+Copy the app/data/shoes.json.example file and rename it to app/data/shoes.json:
+bash
+Copy code
+cp app/data/shoes.json.example app/data/shoes.json
+Edit the app/data/shoes.json file to add your products.
 
-[Live Demo](https://gshoes.vercel.app)
+Start your web server and navigate to the application in your browser.
 
-# Requirements
+Features
+Displaying products
+The application reads the app/data/shoes.json file to display a list of shoes on the home page.
 
-Your application should have at least features in [Must have](#must-have), things in [Nice to have](#nice-to-have) is optional (but yeah, it's attractive if you have).
+Adding items to the cart
+The user can add items to their cart by clicking the "ADD TO CART" button next to the item. If the item is already in the cart, the quantity will be incremented.
 
-### Must have:
+Updating the cart
+The user can update the quantity of an item in their cart by clicking the "UP" or "DOWN" buttons next to the item.
 
-- Display all products in `Our Products` section (for products data please check from [Technical Requirements](#technical-requirements)):
-  - Single product should have name, description, price, image and `Add To Cart` button.
-  - User able to click on `Add To Cart` to add target product to their cart.
-  - Added product doesn't have `Add To Cart` button anymore, it should have `Check Mark Icon (✓)` instead.
-- Display all added products in `Your Cart` section:
-  - Each product in cart should have name, price, image, increase/decrease amount button and remove button.
-  - User able to increase/decrease amount of a product in cart. When product's amount is decreased to zero, that product will be removed from cart naturally.
-  - User able to remove product from cart.
-  - Show total price of all products in car. When user increase/decrease product's amount or remove product, total price should be re-calculate correctly.
-  - When there are no products in cart, we should show `Your cart is empty` message.
-  - Products in cart should be persistent: When user visit the application, products are added before should be showed, user don't need to add products again.
-- UI must follow correctly design from [live demo](https://gshoes.vercel.app).
+Removing items from the cart
+The user can remove an item from their cart by clicking the "REMOVE" button next to the item.
 
-### Nice to have:
+Displaying the cart
+The user can view the items in their cart by clicking the "Your cart" button in the navigation bar. The total price of the items in the cart is also displayed.
 
-- Responsive design (look good on all devices: desktops, tablets & mobile phones).
-- Smooth animations (don't really need to be same as the demo, just do what you think is good).
-- Deploy the application to heroku.
+Code
+The main functionality of the application is implemented in index.php. The app/data/shoes.json file contains the product data.
 
-# Technical Requirements
-
-You can use any front-end library/framework like React, Angular, Vue, ... or just simple things with HTML + CSS + Javascript (JQuery).
-
-- Products data:
-  - [`./app/data/shoes.json`](./app/data/shoes.json)
-- Images & icons:
-  - [`./app/assets`](./app/assets)
-  - Product images are fetched directly from remote url in data
-- Fonts:
-  - [https://fonts.google.com/specimen/Rubik?query=Rubik](https://fonts.google.com/specimen/Rubik?query=Rubik)
-- Colors:
-  - `White: #FFFFFF`
-  - `Black: #303841`
-  - `Gray: #777777`
-  - `Yellow: #F6C90E`
-
-# Submission
-
-After completing the assignment, please push the source code to remote repository (github/gitlab), then send us the link to your repository.
-
-Don't forget to add `README.md` which includes guide to run your project locally and heroku demo link.
-
-
-**GOOD LUCK!!!**
-
-![Your Code Work](./screenshots/meme.jpeg)
-
-# Contributors
-
-- Ben (from GO): [tranquangvu](https://github.com/tranquangvu)
+When the user adds an item to the cart, the item is stored in a session variable. The session variable is also used to display the items in the cart and update the cart as necessary.
