@@ -1,4 +1,4 @@
-Shoe Shopping Web App
+##Shoe Shopping Web App
 This is a PHP-based web application for an online shoe store, with shopping cart functionality.
 
 Getting started
