@@ -1,26 +1,24 @@
-##Shoe Shopping Web App
+#Shoe Shopping Web App
 This is a PHP-based web application for an online shoe store, with shopping cart functionality.
 
-Getting started
+#Getting started
 Before using this application, ensure that PHP and a web server (e.g. Apache) are installed on your computer.
 
-Clone the repository to your local machine:
+##Clone the repository to your local machine:
 bash
-Copy code
 git clone https://github.com/huy-devsg/g-snaker.git
 Navigate to the g-snaker directory:
 bash
-Copy code
 cd g-snaker
 Copy the app/data/shoes.json.example file and rename it to app/data/shoes.json:
 bash
-Copy code
+
 cp app/data/shoes.json.example app/data/shoes.json
 Edit the app/data/shoes.json file to add your products.
 
-Start your web server and navigate to the application in your browser.
+##Start your web server and navigate to the application in your browser.
 
-Features
+#Features
 Displaying products
 The application reads the app/data/shoes.json file to display a list of shoes on the home page.
 
